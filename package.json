@@ -1,0 +1,20 @@
+{
+  "name": "backend-developer-portfolio",
+  "version": "1.0.0",
+  "description": "Modern Backend Developer Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "backend",
+    "developer",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
