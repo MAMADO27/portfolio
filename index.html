@@ -1086,7 +1086,7 @@
                         <span class="tech-tag">JWT</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/MAMADO27/ecommerce-api" class="project-link" target="_blank">
+                        <a href="https://github.com/MAMADO27/ecommerce-api" class="project-link" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
@@ -1111,7 +1111,7 @@
                         <span class="tech-tag">Cloudinary</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/MAMADO27/RestaurantAPI" class="project-link" target="_blank">
+                        <a href="https://github.com/MAMADO27/RestaurantAPI" class="project-link" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
@@ -1135,7 +1135,7 @@
                         <span class="tech-tag">Nodemailer</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/MAMADO27/simple-tiktok_backend" class="project-link" target="_blank">
+                        <a href="https://github.com/MAMADO27/simple-tiktok_backend" class="project-link" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i> View Code
                         </a>
                     </div>
@@ -1288,16 +1288,20 @@
 
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+                anchor.addEventListener('click', function (e) {
+                // Only prevent default for internal # links
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {  // ← التعديل هنا!
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                         if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                         }
+                    }
+                 });
         });
 
         // Scroll Reveal Animation
