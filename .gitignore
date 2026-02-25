@@ -7,6 +7,10 @@ yarn.lock
 .vercel
 vercel.json
 
+#photo
+favicon.png
+
+
 # OS
 .DS_Store
 Thumbs.db
